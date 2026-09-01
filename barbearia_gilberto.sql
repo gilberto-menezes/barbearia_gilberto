@@ -29,8 +29,17 @@ CREATE TABLE agendamentos (
     FOREIGN KEY (servicos_id) REFERENCES servicos (id)
 );
 
+INSERT INTO clientes (nome, sobrenome, endereco) VALUES
+('Andre', 'Iacono', 'Rua 1'),
+('Gilberto', 'Menezes', 'Rua Renascer 10');
 
-INSERT INTO clientes (nome, sobrenome, endereco) VALUES ('Gilberto','Menezes','Rua renascer RJ, 08');
-INSERT INTO servicos (nome_servico, preco) VALUES ('Corte Degrade', 50.00);
-INSERT INTO agendamentos (data_agendamento, clientes_id, servicos_id) VALUES ('2026-08-31', 1, 1);
+INSERT INTO servicos (nome_servico, preco) VALUES
+('Corte Degrade', 50.00),
+('Barba Completa', 35.00),
+('Corte + Barba', 75.00),
+('Corte Navalhado', 60.00),
+('Pintura', 90.00);
 
+INSERT INTO agendamentos (data_agendamento, clientes_id, servicos_id) VALUES
+('2026-09-02', 1, 1),
+('2026-09-03', 1, 5);
